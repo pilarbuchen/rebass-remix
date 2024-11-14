@@ -11,15 +11,16 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-        "rebass": "^4.0.7",
     "@netlify/remix-adapter": "^2.5.1",
+    "@rebass/forms": "^4.0.6",
     "@remix-run/node": "^2.13.1",
     "@remix-run/react": "^2.13.1",
     "@types/node": "^22.9.0",
     "classnames": "^2.5.1",
     "isbot": "^5.1.17",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "rebass": "^4.0.7"
   },
   "devDependencies": {
     "@remix-run/dev": "^2.13.1",
@@ -36,7 +37,7 @@
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.2",
     "eslint-plugin-react-hooks": "^4.6.2",
-    "sass": "^1.80.6",
+    "sass": "^1.80.7",
     "typescript": "^5.6.3",
     "vite": "^5.4.10",
     "vite-plugin-svgr": "^4.3.0",

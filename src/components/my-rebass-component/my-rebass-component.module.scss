@@ -1,4 +1,112 @@
 @import '../../../src/styles/theme.module.scss';
 
-.root {
+// Variables
+$primary-color: #4a90e2;
+$secondary-color: #50c878;
+$background-color: #f5f7fa;
+$text-primary: #2c3e50;
+$text-secondary: #7f8c8d;
+$shadow-light: 0 2px 8px rgba(0, 0, 0, 0.1);
+$shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.15);
+$border-radius: 12px;
+
+// Mixins
+@mixin flex_center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex_between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin card_hover {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: $shadow-medium;
+    }
+}
+
+.dashboard {
+    background-color: $background-color;
+    min-height: 100vh;
+    padding: 2rem;
+
+    &__nav {
+        background: white;
+        padding: 1rem 2rem;
+        border-radius: $border-radius;
+        margin-bottom: 2rem;
+        box-shadow: $shadow-light;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    &__card {
+        @include card_hover;
+
+        &--stats {
+            background: linear-gradient(135deg, $primary-color, darken($primary-color, 15%));
+            color: white;
+        }
+
+        &--action {
+            background: white;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    &__form {
+        background: white;
+        padding: 2rem;
+        border-radius: $border-radius;
+        box-shadow: $shadow-light;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    &__footer {
+        text-align: center;
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+}
+
+.stat_number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+.button {
+    &--primary {
+        background-color: $primary-color !important;
+        &:hover {
+            background-color: darken($primary-color, 10%) !important;
+        }
+    }
+
+    &--secondary {
+        background-color: $secondary-color !important;
+        &:hover {
+            background-color: darken($secondary-color, 10%) !important;
+        }
+    }
+}
+
+.input_group {
+    margin-bottom: 1.5rem;
+}
+.container {
+    width: 100%;
 }
