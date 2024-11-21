@@ -16,7 +16,7 @@ const MyRebassComponent = () => {
                 {/* Navigation */}
                 <Flex className={styles.dashboard__nav}>
                     <div>
-                        <Heading fontSize={4}>Dashboard</Heading>
+                        <Heading fontSize={4}></Heading>
                     </div>
                     <Flex ml="auto">
                         <Link mr={4} color="text-secondary">
